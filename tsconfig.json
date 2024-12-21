@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"@shared/*": ["./packages/shared/*"]
+		}
+	}
+}

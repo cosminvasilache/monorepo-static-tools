@@ -1,0 +1,30 @@
+{
+  "name": "scratchpad",
+  "private": true,
+  "author": "Cosmin Vasilache",
+  "description": "Singleton Scratchpad with persistence to localStorage",
+  "keywords": [],
+  "version": "0.0.1",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "vite",
+    "_prebuild": "tsc",
+    "build": "vite build",
+    "postbuild": "ln -svf ${PWD}/dist/index.html ../../dist/scratchpad.html",
+    "preview": "vite preview",
+    "test": "",
+    "prepublish": "npm run build",
+    "publish": "gh-pages --dist dist"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.13",
+    "sass": "^1.83.0"
+  }
+}

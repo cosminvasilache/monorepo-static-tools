@@ -1,0 +1,24 @@
+{
+  "name": "scratchpad-temp",
+  "private": true,
+  "author": "Cosmin Vasilache",
+  "description": "A quick and fast way to write temporary notes down.",
+  "keywords": [],
+  "version": "0.0.1",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "vite",
+    "_prebuild": "tsc",
+    "build": "vite build",
+    "postbuild": "ln -svf ${PWD}/dist/index.html ../../dist/scratchpad-temp.html",
+    "preview": "vite preview",
+    "test": "",
+    "prepublish": "npm run build",
+    "publish": "gh-pages --dist dist"
+  },
+  "devDependencies": {}
+}

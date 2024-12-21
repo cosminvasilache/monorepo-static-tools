@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:root {
+  background-color: #242424;
+}
+
+#t {
+  position: fixed;
+  inset: 0;
+
+  resize: none;
+
+  font-family: 'Courier New', Courier, monospace;
+  color: ghostwhite;
+  background-color: transparent;
+
+  padding: 0.5rem;
+  outline: none;
+
+  &:disabled {
+    color: #777;
+    background-color: #222;
+    // background-color: #111;
+    filter: blur(1px);
+  }
+}

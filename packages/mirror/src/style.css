@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  background: #333;
+}
+
+body {
+  height: 100vh;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+
+  opacity: 0.1;
+  font-size: 2rem;
+  background-color: #cccc;
+
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 0.3em;
+}
+.controls:hover {
+  opacity: 1;
+}
+
+button {
+  font-size: inherit;
+
+  color: white;
+  background-color: black;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+}

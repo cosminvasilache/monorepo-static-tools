@@ -1,0 +1,33 @@
+{
+  "name": "monorepo-static-tools",
+  "author": "Cosmin Vasilache",
+  "description": "Static Website tools",
+  "keywords": ["monorepo", "static website", "browser", "front-end"],
+  "version": "0.0.1",
+  "files": ["dist"],
+  "main": "dist/index.html",
+  "license": "ISC",
+  "scripts": {
+    "echo": "npm run echo --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages --dist dist",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "workspaces": [
+    "packages/shared",
+    "packages/hello",
+    "packages/flashlight",
+    "packages/random-password",
+    "packages/mirror",
+    "packages/scratchpad",
+    "packages/scratchpad-temp"
+  ],
+  "devDependencies": {
+    "gh-pages": "^6.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-singlefile": "^2.1.0"
+  }
+}

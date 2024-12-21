@@ -1,0 +1,27 @@
+{
+  "name": "flashlight",
+  "private": true,
+  "author": "Cosmin Vasilache",
+  "keywords": [
+    "light"
+  ],
+  "description": "Toggle between dark and fullscreen white page to illuminate your surroundings",
+  "version": "0.0.1",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.html",
+  "scripts": {
+    "_prebuild": "tsc",
+    "build": "vite build",
+    "postbuild": "ln -svf ${PWD}/dist/index.html ../../dist/flashlight.html",
+    "preview": "vite preview",
+    "test": "",
+    "prepublish": "npm run build",
+    "publish": "gh-pages --dist dist"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
